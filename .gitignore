@@ -1,7 +1,7 @@
 
 # Make sure no data is added to the repository
-input/*.csv
-output/*.csv
+input/data.csv
+output/data.csv
 
 
 
