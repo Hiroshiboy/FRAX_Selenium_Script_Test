@@ -74,3 +74,12 @@ def delete_all_files_in_folder(folder_name):
     """
     for file in pathlib.Path(folder_name).glob('*'):
         file.unlink()
+        
+def check_if_folder_exists_and_create_if_not(folder_name):
+    """
+    Checks if a folder exists and creates it if not.
+    :param folder_name: name of the folder
+    :return: None
+    """
+    if not pathlib.Path(folder_name).exists():
+        pathlib.Path(folder_name).mkdir(parents=True, exist_ok=True)

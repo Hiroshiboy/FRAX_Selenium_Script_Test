@@ -78,6 +78,10 @@ if __name__ == "__main__":
     initial_df['obreak'] = 0
     initial_df['rxlist'] = 0
 
+    # Create the temp folder if it doesn't exist
+    utils.check_if_folder_exists_and_create_if_not("temp")
+
+
     # Because each record takes 3 seconds to process in the FRAX Calculator, we are going to use multi-threading to make it faster
     # Total time taken with No multi-threading: 800 records * 3 seconds = 2400 seconds or 40 minutes
     # Total time taken with multi-threading: ( 800 records / total number of physical cores in CPU ) * 3 seconds = total seconds
